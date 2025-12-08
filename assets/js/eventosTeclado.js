@@ -10,17 +10,25 @@
 // “key” a rosado, naranjo o celeste respectivamente.
 
 
+// 1. DECLARACIÓN DE LA VARIABLE GLOBAL
+let colorGlobal; 
+
 document.addEventListener('keydown', function (event) {
     let cambiar = document.getElementById("key");
 
-    if (event.key === 'a') {
-        cambiar.style.backgroundColor = "pink";
+    if (event.key === 'a') { 
+        colorGlobal = "pink";
     } else if (event.key === 's') {
-        cambiar.style.backgroundColor = "orange";
+        
+        colorGlobal = "orange";
     } else if (event.key === 'd') {
-        cambiar.style.backgroundColor = "lightblue"; 
+        
+        colorGlobal = "lightblue"; 
     }
-    colorDiv(event.key);
+    
+    cambiar.style.backgroundColor = colorGlobal;
+    crearDiv();
+
 });
 
 // Siguiendo con la lógica del punto anterior, al presionar las teclas q, w o e se
