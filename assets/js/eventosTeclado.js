@@ -11,7 +11,7 @@
 
 
 // 1. DECLARACIÓN DE LA VARIABLE GLOBAL
-let colorGlobal; 
+var colorGlobal; 
 
 document.addEventListener('keydown', function (event) {
     let cambiar = document.getElementById("key");
@@ -27,8 +27,8 @@ document.addEventListener('keydown', function (event) {
     }
     
     cambiar.style.backgroundColor = colorGlobal;
-    crearDiv();
 
+    colorDiv(event.key);
 });
 
 // Siguiendo con la lógica del punto anterior, al presionar las teclas q, w o e se
@@ -43,6 +43,7 @@ let crearDiv = function(color) {
     nuevo.style.border = "2px solid black";
     // Agregar al body o al contenedor
     document.body.appendChild(nuevo);
+    
 };
 let colorDiv = function(tecla) {
 
