@@ -16,12 +16,12 @@ var colorGlobal;
 document.addEventListener('keydown', function (event) {
     let cambiar = document.getElementById("key");
 
-    if (event.key === 'a') { 
+    if (event.key === 'a' || event.key === "A") { 
         colorGlobal = "pink";
-    } else if (event.key === 's') {
+    } else if (event.key === 's' || event.key === "S" ) {
         
         colorGlobal = "orange";
-    } else if (event.key === 'd') {
+    } else if (event.key === 'd' || event.key === "D") {
         
         colorGlobal = "lightblue"; 
     }
@@ -47,13 +47,13 @@ let crearDiv = function(color) {
 };
 let colorDiv = function(tecla) {
 
-    if (tecla === "q") {
+    if (tecla === "q" || tecla ==="Q") {
         crearDiv("purple");   
     } 
-    else if (tecla === "w") {
+    else if (tecla === "w" || tecla === "W") {
         crearDiv("gray");      
     } 
-    else if (tecla === "e") {
+    else if (tecla === "e" ||tecla === "E") {
         crearDiv("brown");    
     }
 }
